@@ -102,8 +102,6 @@ pub fn package(
 
     switch (args.options.backend) {
         .glfw_wgpu => {
-            zgui_c_cpp.addIncludePath(.{ .path = thisDir() ++ "/../zglfw/libs/glfw/include" });
-            zgui_c_cpp.addIncludePath(.{ .path = thisDir() ++ "/../zgpu/libs/dawn/include" });
             zgui_c_cpp.addCSourceFiles(&.{
                 thisDir() ++ "/libs/imgui/backends/imgui_impl_glfw.cpp",
                 thisDir() ++ "/libs/imgui/backends/imgui_impl_wgpu.cpp",
